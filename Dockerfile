@@ -4,7 +4,7 @@ EXPOSE 8080
  
 ENV APP_HOME /usr/src/app
 
-//COPY target/*.jar $APP_HOME/app.jar
+#COPY target/*.jar $APP_HOME/app.jar
 COPY --from=build /app/target/*.jar app.jar
 
 WORKDIR $APP_HOME
